@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: ms-users-practica
+  profiles:
+    active: local
+

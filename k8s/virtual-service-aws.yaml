@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: ms-users-practica
+spec:
+  hosts:
+  - "the-phe.redbee.cl"
+  gateways:
+  - "the-phe-gateway-cert"
+  http:
+  - match:
+    - uri:
+        prefix: "/api/ms-users-practica/"
+    route:
+    - destination:
+        host: ms-users-practica

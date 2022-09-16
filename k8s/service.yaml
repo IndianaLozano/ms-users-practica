@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: ms-users-practica
+spec:
+  selector:
+    app: ms-users-practica
+  ports:
+  - name: http
+    protocol: TCP
+    port: 8080

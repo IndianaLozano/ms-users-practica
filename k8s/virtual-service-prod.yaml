@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: ms-users-practica
+spec:
+  hosts:
+  - "comercios.prismamediosdepago.com"
+  gateways:
+  - "the-phe-gateway"
+  http:
+  - match:
+    - uri:
+        prefix: "/api/ms-users-practica/"
+    route:
+    - destination:
+        host: ms-users-practica
